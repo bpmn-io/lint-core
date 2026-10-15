@@ -1,0 +1,80 @@
+{
+  "name": "@bpmn-io/lint-core",
+  "description": "Shared implementation of bpmnlint and dmnlint. Internal: depend on bpmnlint or dmnlint instead.",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./lib/linter": "./lib/linter.js",
+    "./lib/cli": "./lib/cli.js",
+    "./lib/traverse": "./lib/traverse.js",
+    "./lib/test-rule": "./lib/test-rule.js",
+    "./lib/resolver/node-resolver": "./lib/resolver/node-resolver.js",
+    "./lib/resolver/static-resolver": "./lib/resolver/static-resolver.js",
+    "./lib/resolver/helper": "./lib/resolver/helper.js",
+    "./lib/support/compile-config": "./lib/support/compile-config.js",
+    "./lib/testers/rule-tester": {
+      "types": "./lib/testers/rule-tester.d.ts",
+      "default": "./lib/testers/rule-tester.js"
+    },
+    "./lib/testers/helper": "./lib/testers/helper.js",
+    "./lib/types": {
+      "types": "./lib/types.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "keywords": [
+    "bpmnlint",
+    "dmnlint",
+    "linter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpmn-io/lint-core.git"
+  },
+  "author": {
+    "name": "bpmn.io contributors",
+    "url": "https://github.com/bpmn-io"
+  },
+  "engines": {
+    "node": ">= 24"
+  },
+  "license": "MIT",
+  "scripts": {
+    "all": "run-s lint lint:types test-coverage",
+    "lint": "eslint .",
+    "lint:types": "tsc",
+    "test": "mocha \"test/spec/**/*.*js\"",
+    "test-coverage": "nyc --reporter=lcov --reporter=html npm test",
+    "dev": "npm test -- --watch"
+  },
+  "dependencies": {
+    "@bpmn-io/moddle-utils": "^0.3.0",
+    "ansi-colors": "^4.1.3",
+    "cli-table": "^0.3.11",
+    "color-support": "^1.1.3",
+    "min-dash": "^5.1.0",
+    "mri": "^1.2.0",
+    "pluralize": "^8.0.0",
+    "tiny-glob": "^0.2.9"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.13.3",
+    "bpmn-moddle": "^10.1.0",
+    "chai": "^6.2.2",
+    "eslint": "^9.39.5",
+    "eslint-plugin-bpmn-io": "^2.3.1",
+    "execa": "^9.6.1",
+    "mocha": "^11.8.0",
+    "npm-run-all2": "^9.0.3",
+    "nyc": "^18.0.0",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib"
+  ]
+}
