@@ -8,6 +8,8 @@ All notable changes to [@bpmn-io/lint-core](https://github.com/bpmn-io/lint-core
 
 ___Note:__ Yet to be released changes appear here._
 
+* `FIX`: import rules from packages that declare `exports` with file extensions only (`./rules/*.js`) when compiling configuration
+
 ## 0.1.0
 
 * `FEAT`: initial version, extracted from `bpmnlint` :tada:
