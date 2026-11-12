@@ -1,7 +1,7 @@
 {
   "name": "@bpmn-io/lint-core",
   "description": "Shared implementation of bpmnlint and dmnlint. Internal: depend on bpmnlint or dmnlint instead.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index.js",
   "exports": {
     ".": "./lib/index.js",
