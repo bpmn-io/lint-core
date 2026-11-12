@@ -37,7 +37,7 @@
     "url": "https://github.com/bpmn-io"
   },
   "engines": {
-    "node": ">= 24"
+    "node": ">= 20"
   },
   "license": "MIT",
   "scripts": {
