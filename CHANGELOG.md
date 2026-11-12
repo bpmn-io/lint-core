@@ -8,6 +8,10 @@ All notable changes to [@bpmn-io/lint-core](https://github.com/bpmn-io/lint-core
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.1.1
+
+* `CHORE`: restore `Node@20` support
+
 ## 0.1.0
 
 * `FEAT`: initial version, extracted from `bpmnlint` :tada:
